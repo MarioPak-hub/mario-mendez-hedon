@@ -33,6 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/wizard.js" defer></script>
   <script type="module" src="assets/js/hero-scene.js"></script>
 
   <script type="application/ld+json">
@@ -80,6 +81,9 @@
       <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h4"/></symbol>
       <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
       <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
     </defs>
   </svg>
 
@@ -100,7 +104,7 @@
         <a href="#asesor">Tu asesor</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn--primary btn--sm nav__cta" data-wa="Hola Mario, quiero una cotización." href="#contacto">
+      <a class="btn btn--primary btn--sm nav__cta" data-wizard="" data-wa="Hola Mario, quiero una cotización." href="#contacto">
         <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Cotizar
       </a>
       <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
@@ -113,7 +117,7 @@
       <a href="#proceso">Proceso</a>
       <a href="#asesor">Tu asesor</a>
       <a href="#contacto">Contacto</a>
-      <a class="btn btn--primary" data-wa="Hola Mario, quiero una cotización." href="#contacto">
+      <a class="btn btn--primary" data-wizard="" data-wa="Hola Mario, quiero una cotización." href="#contacto">
         <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Escríbeme por WhatsApp
       </a>
     </div>
@@ -139,8 +143,8 @@
             <a class="btn btn--primary btn--lg magnetic" href="#ahorro">
               <svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg> Calcular mi ahorro
             </a>
-            <a class="btn btn--glass btn--lg" data-wa="Hola Mario, quiero mi estudio energético sin costo." href="#contacto">
-              <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Estudio sin costo
+            <a class="btn btn--glass btn--lg" data-wizard="" data-wa="Hola Mario, quiero mi estudio energético sin costo." href="#contacto">
+              <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Cotizar sin costo
             </a>
           </div>
           <ul class="cine__chips" aria-label="Ventajas">
@@ -454,7 +458,7 @@
             <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><div><strong>Respuesta rápida</strong><span>Escríbeme y te contesto el mismo día.</span></div></li>
           </ul>
           <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" data-wa="Hola Mario, vi tu página y quiero información sobre paneles solares." href="#contacto">
+            <a class="btn btn--primary btn--lg" data-wizard="" data-wa="Hola Mario, vi tu página y quiero información sobre paneles solares." href="#contacto">
               <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Hablar con Mario
             </a>
             <a class="btn btn--ghost btn--lg" id="call-btn" href="#contacto">
@@ -526,48 +530,26 @@
       <div class="container contact__inner">
         <div class="contact__copy" data-reveal>
           <p class="eyebrow">Cotización sin costo</p>
-          <h2 class="h2" id="contact-title">Mándame tu recibo. <span class="txt-gold">Yo hago el resto.</span></h2>
-          <p class="lead">Llena estos datos y se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+          <h2 class="h2" id="contact-title">Cuéntame qué necesitas. <span class="txt-gold">Yo hago el resto.</span></h2>
+          <p class="lead">Elige una opción y contesta 3 o 4 preguntas rápidas tocando botones. Me llega a WhatsApp todo listo y te respondo con información concreta. Sin compromiso.</p>
           <ul class="contact__list">
             <li><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><span id="contact-phone">WhatsApp directo con Mario</span></li>
             <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Hedón · Guadalajara, Jalisco · Cobertura nacional</span></li>
           </ul>
         </div>
-        <form class="form" id="lead-form" data-reveal novalidate>
-          <div class="field">
-            <label class="label" for="f-nombre">Nombre</label>
-            <input id="f-nombre" name="nombre" autocomplete="name" required />
-            <p class="error" id="e-nombre" hidden>Escribe tu nombre.</p>
+        <div class="help-box" data-reveal>
+          <p class="help-box__q">¿En qué te puedo ayudar?</p>
+          <div class="help-box__opts">
+            <a class="help-opt" href="#contacto" data-wizard="solar" style="--accent:#FFB627"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span>Paneles solares</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="baterias" style="--accent:#E5232A"><svg class="ic" aria-hidden="true"><use href="#i-battery"/></svg><span>Baterías y respaldo</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="hvac" style="--accent:#5CC8FF"><svg class="ic" aria-hidden="true"><use href="#i-snow"/></svg><span>Aire acondicionado</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="redes" style="--accent:#9B8CFF"><svg class="ic" aria-hidden="true"><use href="#i-cpu"/></svg><span>Redes, cableado y cámaras</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="ev" style="--accent:#2BD47D"><svg class="ic" aria-hidden="true"><use href="#i-plug"/></svg><span>Cargadores eléctricos</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="gaslp" style="--accent:#FF7A1A"><svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg><span>Conversión a gas LP</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="help-opt" href="#contacto" data-wizard="otro" style="--accent:#A3ADBB"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg><span>Otra cosa / no estoy seguro</span><svg class="ic help-opt__go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
-          <div class="field-row">
-            <div class="field">
-              <label class="label" for="f-ciudad">Ciudad</label>
-              <input id="f-ciudad" name="ciudad" autocomplete="address-level2" />
-            </div>
-            <div class="field">
-              <label class="label" for="f-tipo">Tipo de proyecto</label>
-              <select id="f-tipo" name="tipo">
-                <option>Paneles solares – casa</option>
-                <option>Paneles solares – negocio o industria</option>
-                <option>Baterías / respaldo</option>
-                <option>Bombeo solar</option>
-                <option>Climatización / aire acondicionado</option>
-                <option>Redes, cableado o CCTV</option>
-                <option>Cargadores para autos eléctricos</option>
-                <option>Conversión a gas LP</option>
-                <option>Otro / no estoy seguro</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="f-recibo">¿Cuánto pagas de luz al mes? <span class="opt">(opcional)</span></label>
-            <input id="f-recibo" name="recibo" inputmode="numeric" placeholder="Ej. 4,500" />
-          </div>
-          <button class="btn btn--primary btn--lg btn--block" type="submit">
-            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg> Enviar por WhatsApp
-          </button>
-          <p class="fine">Tu información se usa solo para atender tu solicitud.</p>
-        </form>
+          <a class="help-box__direct" data-wa="Hola Mario, vi tu página y quiero información." href="#contacto">Prefiero escribir directo por WhatsApp</a>
+        </div>
       </div>
     </section>
   </main>
@@ -596,7 +578,7 @@
   </footer>
 
   <!-- Floating WhatsApp -->
-  <a class="fab" data-wa="Hola Mario, quiero información sobre paneles solares." href="#contacto" aria-label="Escribir a Mario por WhatsApp">
+  <a class="fab" data-wizard="" data-wa="Hola Mario, quiero información sobre paneles solares." href="#contacto" aria-label="Escribir a Mario por WhatsApp">
     <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
 </body>

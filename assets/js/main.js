@@ -8,6 +8,8 @@ const CONFIG = {
   telefono: "+523333553680",
 };
 
+window.CONFIG = CONFIG;
+
 (() => {
   "use strict";
   const $ = (s, r = document) => r.querySelector(s);
