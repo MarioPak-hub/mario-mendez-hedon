@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Cuando el dominio esté aprobado, agrega aquí:
+# Sitemap: https://TU-DOMINIO/sitemap.xml
