@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Cuando el dominio esté aprobado, agrega aquí:
-# Sitemap: https://TU-DOMINIO/sitemap.xml
+Sitemap: https://dalesol.com/sitemap.xml
